@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="CampusAssassins.Options" iOS:Page.UseSafeArea="true">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#305252"
+                          Offset="0.1"/>
+            <GradientStop Color="#F06449"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout VerticalOptions="FillAndExpand" Padding="5" Spacing="10">
+        <Label Text="Options and Privacy" HorizontalTextAlignment="Center" TextColor="#DEE2E3" FontSize="40"  FontFamily="Constantia" FontAttributes="Bold"/>
+        <BoxView   VerticalOptions="Center"
+           HorizontalOptions="Center"
+           HeightRequest="1"
+           WidthRequest="500"  
+           Color="Black"></BoxView>
+        <Label Text="Display Name" HorizontalTextAlignment="Center" TextColor="#DEE2E3" FontSize="16"  FontFamily="Constantia" FontAttributes="Bold"/>
+        <Entry Placeholder="Enter New Display Name" />
+        <Button Text="Update Display Name" TextColor="Black" FontSize="28" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked" CornerRadius="20" BackgroundColor="#4077878B" FontFamily="Constantia" TextTransform="None"/>
+        <Label Text="Set Location Radius" HorizontalTextAlignment="Center" TextColor="#DEE2E3" FontSize="20"  FontFamily="Constantia" FontAttributes="Bold"/>
+        <Slider Maximum="75" Minimum="2" ValueChanged="OnSliderValueChanged" />
+        <Label x:Name="Radius" Text="Radius: 5" HorizontalTextAlignment="Center" TextColor="#DEE2E3" FontSize="10"  FontFamily="Constantia" FontAttributes="Bold"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:mapsui="clr-namespace:Mapsui.UI.Forms;assembly=Mapsui.UI.Forms"
+             x:Class="CampusAssassins.Lobby" iOS:Page.UseSafeArea="true">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="0,1">
+            <GradientStop Color="#305252"
+                          Offset="0.1"/>
+            <GradientStop Color="#F06449"
+                          Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Harry's Private Lobby" HorizontalTextAlignment="Center" TextColor="#DEE2E3" FontSize="50"  FontFamily="Constantia" FontAttributes="Bold"/>
+            <BoxView   VerticalOptions="Center"
+           HorizontalOptions="Center"
+           HeightRequest="1"
+           WidthRequest="500"  
+           Color="Black"></BoxView>
+            <Label Text="Game Starts In:" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"  FontFamily="Constantia"/>
+            <Label x:Name="TimerLabel" Text="17:42:69" HorizontalTextAlignment="Center" TextColor="White" FontSize="48"  FontFamily="Constantia"/>
+            <mapsui:MapView x:Name="mapView"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="Fill"
+            BackgroundColor="Gray" />
+            <Button Text="Leave Lobby" TextColor="Black" FontSize="28" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Clicked="OnButtonClicked" CornerRadius="20" BackgroundColor="#4077878B" FontFamily="Constantia" TextTransform="None"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
